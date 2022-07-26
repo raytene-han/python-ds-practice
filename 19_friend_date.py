@@ -17,7 +17,7 @@ def friend_date(a, b):
         True
     """
 
-    first = set(a[2])
-    second = set(b[2])
+    first_friend_hobbies = set(a[2])
+    second_friend_hobbies = set(b[2])
 
-    return True if (first & second) else False
+    return bool(first_friend_hobbies & second_friend_hobbies)

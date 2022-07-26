@@ -42,4 +42,5 @@ def calculate(operation, a, b, make_int=False, message='The result is'):
 
     if make_int:
         result = int(result)
+
     return f"{message} {result}"

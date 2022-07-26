@@ -5,4 +5,4 @@ def compact(lst):
         [1, 2, 'All done']
     """
 
-    return [elem for elem in lst if not not elem]
+    return [elem for elem in lst if elem]

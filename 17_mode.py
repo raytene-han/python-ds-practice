@@ -11,14 +11,20 @@ def mode(nums):
         >>> mode([2, 2, 3, 3, 2])
         2
     """
-    greatest = None
-    counter = 0
-    for num in nums:
-        if nums.count(num) > counter:
-            greatest = num
-            counter = nums.count(num)
 
-    return greatest
+    frequency = {}
+
+    for num in nums:
+        # if frequency.get(num):
+        #     frequency[num] += 1
+        # else:
+        #     frequency[num] = 1
+        frequency[num] = (frequency.get(num) or 0) + 1
+
+    return max(frequency, key = frequency.get)
 
     # highest_count = {num: nums.count(num) for num in nums}
     # return max(highest_count)
+
+    #.count is O(n)
+    #use max with 2nd arg
